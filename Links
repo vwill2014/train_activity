@@ -1,0 +1,30 @@
+
+firebase:
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDqK1J2YDYkRHVQWK1j_GIdSKzH0XEcc58",
+    authDomain: "vrules-6be1c.firebaseapp.com",
+    databaseURL: "https://vrules-6be1c.firebaseio.com",
+    projectId: "vrules-6be1c",
+    storageBucket: "vrules-6be1c.appspot.com",
+    messagingSenderId: "807533172398"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+The information below may be needed in my train app---
+
+ref== the path you want your data to go.
+.set === we are referencing the database to get the value of the click. 
+database.ref().set({
+        clickCount: clickCounter
+
+      });
+)
+
+moment.js
