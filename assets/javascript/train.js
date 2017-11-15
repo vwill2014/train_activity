@@ -1,50 +1,38 @@
-alert (I am connected);
 
- // Initialize Firebase
-    // This is the code we copied and pasted from our app page
-    var config = {
-      apiKey: "AIzaSyDqK1J2YDYkRHVQWK1j_GIdSKzH0XEcc58",
-      authDomain: "vrules-6be1c.firebaseapp.com",
-      databaseURL: "https://vrules-6be1c.firebaseio.com",
-      storageBucket: "vrules-6be1c.appspot.com"
-    };
+   var config = {
+    apiKey: "AIzaSyB6LzWBgaVFR5tsD9HE-bmgVTUwxaydHjA",
+    authDomain: "train-station-6d9bb.firebaseapp.com",
+    databaseURL: "https://train-station-6d9bb.firebaseio.com",
+    storageBucket: "train-station-6d9bb.appspot.com",
+  };
 
-    firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
-    var database = firebase.database();
+// this information below will reference the firebase database.
 
-    // ============ add value to input fields here=====
+var trainData = firebase.database();
 
-    // data.base.ref().set({
+// below helps me send information to firebase
 
-    // 	// I will be adding value to the input fields
+$("#addMyTrain").on("click", function(){
 
-    // })
+var trainName = $("#trainNameInput").val().trim();
+var destination = $("#destinationInput").val().trim();
+var firstTrain = moment($("#firstTrainInput").val().trim(),"HH:mm").subtract(10,"years").format("x");
+var frequency = $("#frequencyInput").val().trim();
 
-// ============Create the snapshot function here
+var newTrain = {
 
-	datebase.ref().on("vale", function(snapshot){
-		console.log (snapshot.val());
-		// $(#name).text(snapshot.val().the variable name goes here);
+name:trainName,
+destination:destination,
+firstTrain:firstTrain,
+frequency:frequency
 
+}
 
-			// the data will needs to be pushed because
-		// varable? = snap.val().whatever set value goes here;
-	// })
-
-
-		// variable Name: $(id).val().trim(),
-		// copied for each variable
-
-    // add the following in my code database.ref().set({
-    	// .set wants to be given an object - 
-
-   //  	example below: 
-
-   	// clickCount is created in the database by coding it below and setting it to a variable within the code
-   // clickCount : clickCounter
+;
 
 
-// what I want to add value to goes here.
+});
 
-    // });
+
